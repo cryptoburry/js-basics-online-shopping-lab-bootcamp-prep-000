@@ -62,7 +62,7 @@ function placeOrder(cardNumber) {
   else{
     totalCost=total();
     for(var i=0;i<cart.length;i++){
-      cart.pop();
+      cart.slice();
     }
     return `Your total cost is $${totalCost}, which will be charged to the card ${cardNumber}.`
     
